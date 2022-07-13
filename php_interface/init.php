@@ -15,3 +15,6 @@ includeFile('/local/php_interface/include/classLoader.php');
 
 //functions
 includeFile('/local/php_interface/include/functions.php');
+
+//handlers
+includeFile('/local/php_interface/include/handlers.php');
