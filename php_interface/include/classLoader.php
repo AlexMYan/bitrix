@@ -9,6 +9,9 @@ Bitrix\Main\Loader::registerAutoLoadClasses(null, [
     'Custom\CrmCompany' => '/local/php_interface/classes/Custom/CrmCompany.php',
     'Custom\QuantitativeAccounting' => '/local/php_interface/classes/Custom/QuantitativeAccounting.php',
 
+    "ElementWithDescription" => "/local/props/elementWithDescription/ElementWithDescription.php",
+    "CUserTypeIBlockElementList" => "/local/props/CUserTypeIBlockElementList/CUserTypeIBlockElementList.php",
+
 ]);
 
 
