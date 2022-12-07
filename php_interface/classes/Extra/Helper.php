@@ -264,6 +264,24 @@ class Helper
     }
 
 
+    /**
+     * Возвращает  элементы по фильтру
+     *
+     *
+     * @param array $arFilter
+     *
+     * @return int
+     */
+    public static function getElements($arFilter,$arSelect)
+    {
+        $arr=[];
+        $result= \CIBlockElement::GetList(array(), $arFilter, false,array(),$arSelect);
+        while ($res = $result->Fetch()) {
 
+            $arr=$res;
+        }
+
+        return $arr;
+    }
 
 }
