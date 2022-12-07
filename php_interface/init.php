@@ -7,6 +7,8 @@ function includeFile($relPath)
     }
 }
 
+echo 5;
+
 //constants
 includeFile('/local/php_interface/include/constants.php');
 
