@@ -284,4 +284,23 @@ class Helper
         return $arr;
     }
 
+    /**
+     * Доступное кол-во
+     *
+     * @param $id
+     * @return false|mixed
+     */
+    public function getCatalogProduct($id){
+        //Доступное количество
+        $arQuantity = Bitrix\Catalog\Model\Product::getList([
+            'filter' => array('ID' => $id),
+        ])->Fetch();
+        $value = "";
+        if (!is_null($arQuantity['QUANTITY']) && $arQuantity['QUANTITY'] != 0) {
+           return  $arQuantity['QUANTITY'];
+        }
+
+        return false;
+    }
+
 }
