@@ -12,6 +12,10 @@ Bitrix\Main\Loader::registerAutoLoadClasses(null, [
     "ElementWithDescription" => "/local/props/elementWithDescription/ElementWithDescription.php",
     "CUserTypeIBlockElementList" => "/local/props/CUserTypeIBlockElementList/CUserTypeIBlockElementList.php",
 
+    'Extra\СonversionJsonToYml' => '/local/php_interface/classes/Extra/СonversionJsonToYml.php',
+    'Extra\СonversionYmlToKml' => '/local/php_interface/classes/Extra/СonversionYmlToKml.php',
+    'Extra\CustomOnBeforePrologHandler' => '/local/php_interface/classes/Extra/CustomOnBeforePrologHandler.php',
+
 ]);
 
 

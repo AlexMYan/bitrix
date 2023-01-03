@@ -8,3 +8,8 @@ EventManager::getInstance()->addEventHandler(
     'catalog', 'Bitrix\Catalog\Model\Product::OnBeforeUpdate',
     ['\Custom\QuantitativeAccounting', 'OnBeforeProductUpdateHandler']
 );
+
+EventManager::getInstance()->addEventHandler(
+    'main', 'OnBeforeProlog',
+    ['\Extra\CustomOnBeforePrologHandler', 'ReinitPath']
+);
