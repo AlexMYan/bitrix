@@ -303,4 +303,52 @@ class Helper
         return false;
     }
 
+    /**
+     * Пользовательские поля раздела
+     *
+     * @param $arFilter
+     * @param $arSelect
+     * @return array
+     */
+    public static function GetUFSection($arFilter,$arSelect){
+
+        $arrResult=[];
+
+        $rsResult = \CIBlockSection::GetList(
+            array("SORT" => "ASC"),
+            $arFilter,
+            false,
+            $arSelect
+        );
+
+        if($secResult = $rsResult -> GetNext()){
+            $arrResult=$secResult;
+        }
+
+        return $arrResult;
+    }
+
+
+    /**
+     * Символьный код инфоблока
+     *
+     * @param $type
+     * @param $id
+     * @return false
+     */
+    public static function GetCodeIblock($type,$id){
+
+        $rsIBlock = CIBlock::GetList(
+            array('sort' => 'asc'),
+            array('TYPE' =>$type, 'ACTIVE' => 'Y')
+        );
+        while ($arr = $rsIBlock->Fetch()) {
+            if($arr['ID']==$id){
+                return $arr['CODE'];
+            }
+        }
+
+        return  false;
+    }
+
 }
